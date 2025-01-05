@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #b96a57;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Konteks Container */
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fbfafa;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #f2f2f8;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 40px;
+            color: #f8f4f4;
+        }
+
+        /* Card untuk Tim */
+        .team-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .team-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+            transition: all 0.3s ease;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .team-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .team-card p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #b96a57;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Responsif */
+        @media screen and (max-width: 768px) {
+            .team-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Container utama -->
+<div class="about-container">
+    <h1>About Us</h1>
+
+    <!-- Deskripsi singkat -->
+    <div class="about-text">
+        <p>
+            Kami adalah sebuah tim yang berdedikasi untuk memberikan pengalaman pengguna terbaik dalam setiap proyek yang kami kerjakan.
+            Misi kami adalah membuat dunia digital lebih baik, lebih terhubung, dan lebih mudah diakses oleh semua orang.
+        </p>
+    </div>
+
+    <!-- Section tim -->
+    <div class="section-header">
+        <h2>Meet Our Team</h2>
+    </div>
+
+    <div class="team-cards">
+        <!-- Anggota Tim 1 -->
+        <div class="team-card">
+            <img src="ga.jpeg" alt="Anggota Tim 1">
+            <h4>Genta abdurrahman</h4>
+            <p> Adalah mahasiswa <br> dari STT Wastukancana</p>
+            <p>dari kelas Malam A <br> Teknik Informatika 2024</p>
+        </div>
+        <!-- Anggota Tim 2 -->
+        <div class="team-card">
+            <img src="GU 2.jpg" alt="Anggota Tim 2">
+            <h2>GUS BOUQUET <br> 2025</h2>
+        </div>
+        <!-- Anggota Tim 3 -->
+        <div class="team-card">
+            <img src="ucup.jpeg" alt="Anggota Tim 3">
+            <h4>Yusuf Irawan</h4>
+            <p>Adalah mahasiswa <br> dari STT Wastukancana</p>
+            <p>dari kelas Malam A <br> Teknik Informatika 2024</p>
+        </div>
+    </div>
+
+    <!-- Section untuk Hubungi Kami atau Call to Action -->
+    <div class="section-header">
+        <h2>Thank You</h2>
+    </div>
+    <div class="about-text">
+        <p>
+            Jika Anda ingin bekerja sama dengan kami atau memiliki pertanyaan lebih lanjut, jangan ragu untuk menghubungi kami. Kami siap membantu Anda! <br> &copy; 2025
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+    </div>
+</div>
+
+<script>
+    // JavaScript interaktif jika dibutuhkan
+    document.querySelectorAll('.team-card').forEach(card => {
+        card.addEventListener('click', () => {
+            alert('Anda mengklik kartu ' + card.querySelector('h3').innerText);
+        });
+    });
+</script>
+
+</body>
+</html>

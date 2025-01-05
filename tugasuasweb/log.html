@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Halaman Sederhana</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #b96a57, #eff0f4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            border-color: #6e7dff;
+            outline: none;
+        }
+
+        .btn-login {
+            background-color: #6e7dff;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #5a67d8;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="button" class="btn-login" onclick="login()">Login</button>
+    </form>
+    <p id="error-message" class="error-message"></p>
+    <p class="footer-text">Belum punya akun? <a href="#">Daftar</a></p>
+</div>
+
+<script>
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var errorMessage = document.getElementById('error-message');
+
+        errorMessage.innerHTML = '';
+
+        if (username === '' || password === '') {
+            errorMessage.innerHTML = 'Username dan Password tidak boleh kosong!';
+            return;
+        }
+
+        if (username === 'gus2025' && password === '12345') {
+            window.location.href = 'index.html';
+        } else {
+            errorMessage.innerHTML = 'Username atau Password salah!';
+        }
+    }
+</script>
+
+</body>
+</html>
